@@ -1,0 +1,162 @@
+:root {
+  --bg: #07111f;
+  --panel: rgba(8, 20, 38, 0.78);
+  --border: rgba(126, 180, 255, 0.18);
+  --text: #ebf3ff;
+  --muted: #8ea6c6;
+  --cyan: #58d7ff;
+  --orange: #ff8c42;
+  --red: #ff5a5f;
+  --gradient: radial-gradient(circle at top, #153b67 0%, #07111f 55%);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  font-family: "Segoe UI", sans-serif;
+  background: var(--gradient);
+  color: var(--text);
+}
+
+.shell {
+  max-width: 1180px;
+  margin: 0 auto;
+  padding: 48px 20px 72px;
+}
+
+.hero {
+  display: grid;
+  grid-template-columns: 1.6fr 0.8fr;
+  gap: 24px;
+  align-items: end;
+}
+
+.eyebrow {
+  text-transform: uppercase;
+  letter-spacing: 0.16em;
+  color: var(--cyan);
+  font-size: 0.78rem;
+}
+
+h1,
+h2,
+p {
+  margin-top: 0;
+}
+
+h1 {
+  max-width: 12ch;
+  font-size: clamp(2.6rem, 6vw, 5rem);
+  line-height: 0.95;
+}
+
+.lede,
+.panel p,
+li,
+small {
+  color: var(--muted);
+}
+
+.hero-card,
+.panel,
+.feed {
+  background: var(--panel);
+  border: 1px solid var(--border);
+  border-radius: 20px;
+  backdrop-filter: blur(16px);
+  box-shadow: 0 18px 60px rgba(0, 0, 0, 0.24);
+}
+
+.hero-card {
+  padding: 24px;
+}
+
+.hero-card strong {
+  display: block;
+  font-size: 2rem;
+  margin: 8px 0;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 18px;
+  margin: 28px 0;
+}
+
+.panel {
+  padding: 24px;
+}
+
+.accent {
+  border-color: rgba(255, 140, 66, 0.3);
+}
+
+.feed {
+  padding: 24px;
+}
+
+.feed-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 12px;
+}
+
+button {
+  border: 0;
+  padding: 12px 16px;
+  border-radius: 999px;
+  color: #03111d;
+  background: linear-gradient(135deg, var(--cyan), #c6f5ff);
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.events {
+  display: grid;
+  gap: 14px;
+  margin-top: 16px;
+}
+
+.event {
+  padding: 18px;
+  border-radius: 16px;
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(255, 255, 255, 0.06);
+}
+
+.event strong {
+  display: inline-block;
+  margin-bottom: 6px;
+}
+
+.badge {
+  display: inline-block;
+  margin-left: 10px;
+  padding: 4px 10px;
+  border-radius: 999px;
+  font-size: 0.72rem;
+  font-weight: 700;
+}
+
+.high {
+  background: rgba(255, 90, 95, 0.18);
+  color: #ffb7b9;
+}
+
+.medium {
+  background: rgba(255, 140, 66, 0.18);
+  color: #ffd0b2;
+}
+
+@media (max-width: 900px) {
+  .hero,
+  .grid {
+    grid-template-columns: 1fr;
+  }
+}

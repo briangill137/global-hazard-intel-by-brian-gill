@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Global Hazard Intel Dashboard</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <main class="shell">
+      <section class="hero">
+        <div>
+          <p class="eyebrow">Environmental Hazard Intelligence</p>
+          <h1>Global hazard detection for atmosphere, industry, and public health.</h1>
+          <p class="lede">
+            A concept dashboard for monitoring dust storms, wildfire smoke, chemical leaks,
+            and pollution spikes from fused earth observation data.
+          </p>
+        </div>
+        <div class="hero-card">
+          <span>Live Signals</span>
+          <strong>128 Regions</strong>
+          <small>Multi-source fusion engine online</small>
+        </div>
+      </section>
+
+      <section class="grid">
+        <article class="panel">
+          <h2>Tracked Hazards</h2>
+          <ul>
+            <li>Dust Storms</li>
+            <li>Wildfire Smoke</li>
+            <li>Chemical Leaks</li>
+            <li>Pollution Spikes</li>
+          </ul>
+        </article>
+
+        <article class="panel accent">
+          <h2>Data Sources</h2>
+          <ul>
+            <li>Satellite Imagery</li>
+            <li>Weather Fields</li>
+            <li>Air Quality Sensors</li>
+          </ul>
+        </article>
+
+        <article class="panel">
+          <h2>Detection Flow</h2>
+          <p>Ingest -> Normalize -> Fuse -> Score -> Alert -> Visualize</p>
+        </article>
+      </section>
+
+      <section class="feed">
+        <div class="feed-header">
+          <h2>Sample Global Events</h2>
+          <button id="refresh">Refresh Feed</button>
+        </div>
+        <div id="events" class="events"></div>
+      </section>
+    </main>
+
+    <script src="app.js"></script>
+  </body>
+</html>
